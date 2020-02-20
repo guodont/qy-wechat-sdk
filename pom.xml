@@ -6,7 +6,26 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-
+    <name>qy-wechat-sdk</name>
+    <description>This project is work wechat server api sdk for java .</description>
+    <url>https://github.com/guodont/qy-wechat-sdk/</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>guodont</name>
+            <email>guodont@163.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git@github.com:guodont/qy-wechat-sdk.git</connection>
+        <developerConnection>scm:git:git@github.com:guodont/qy-wechat-sdk.git</developerConnection>
+        <url>git@github.com:guodont/qy-wechat-sdk.git</url>
+    </scm>
 
     <dependencies>
         <dependency>
