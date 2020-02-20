@@ -1,11 +1,11 @@
-# 企业微信 Java Client
+# 企业微信 Java SDK
 
 ## Usage
 ### 1、Add dependency
 ``` java
 <dependency>
-    <groupId>com.cc.pub</groupId>
-    <artifactId>qyapi-wechat-sdk</artifactId>
+    <groupId>com.github.guodont</groupId>
+    <artifactId>qy-wechat-sdk</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 </dependency>
 
@@ -38,24 +38,25 @@ public class CorpWechatConfig {
 ### 3、Invoke in java code
 
 ``` java
-    List<String> tags = new ArrayList<>();
-    tags.add("1"); // java 开发
-    // 发送给指定tag ，标签ID列表，多个接收者用‘|’分隔，最多支持100个。当touser为@all时忽略本参数
-    corpWeChatService.sendByTag(tags, "领奖通知", "<div class=\"gray\">2018年05月3日</div> <div class=\"normal\">恭喜你抽中iPhone 7一台，领奖码：xe7y</div><div class=\"highlight\">请于2018年05月10日前联系行政同事领取</div>");
-
-    List<String> users = new ArrayList<>();
-    users.add("qy01eaba0fa6470db69cb58a4633");
-    // 发送给指定用户，成员ID列表（消息接收者，多个接收者用‘|’分隔，最多支持1000个）。特殊情况：指定为@all，则向关注该企业应用的全部成员发送
-    corpWeChatService.sendByUser(users, "领奖通知", "<div class=\"gray\">2018年05月3日</div> <div class=\"normal\">恭喜你抽中iPhone 7一台，领奖码：xe7y</div><div class=\"highlight\">请于2018年05月10日前联系行政同事领取</div>");
-
-    // 部门ID：1842014604 研发部
-    List<String> partys = new ArrayList<>();
-    partys.add("1842014604");
-    // 发送给指定部门， 部门ID列表，多个接收者用‘|’分隔，最多支持100个。当touser为@all时忽略本参数
-    // corpWeChatService.sendByParty(partys, "企业应用消息测试。不用理。");
-
+    CorpWeChatService corpWeChatService = new CorpWeChatService("wx0694d8e24e0aacf1", "", "1000032");
+    ScheduleBean scheduleBean = new ScheduleBean();
+    List<ScheduleBean.AttendeesBean> attendeesBeans = new ArrayList<ScheduleBean.AttendeesBean>();
+    scheduleBean.setSummary("会议助手自动生成"+ UUID.randomUUID().toString());
+    scheduleBean.setDescription(UUID.randomUUID().toString());
+    scheduleBean.setOrganizer("guodong");
+    scheduleBean.setLocation("测试地点" + UUID.randomUUID().toString());
+    scheduleBean.setStart_time(1582206749);
+    scheduleBean.setEnd_time(1582210348);
+    ScheduleBean.AttendeesBean user1 = new ScheduleBean.AttendeesBean();
+    ScheduleBean.AttendeesBean user2 = new ScheduleBean.AttendeesBean();
+    user1.setUserid("guodong");
+    user2.setUserid("xiexuhua");
+    attendeesBeans.add(user1);
+    attendeesBeans.add(user2);
+    scheduleBean.setAttendees(attendeesBeans);
+    corpWeChatService.addSchedule(scheduleBean);
 ```
 
 ### 4、showcase
-![](showcase/1.png)
+![](showcase/2.png)
 
