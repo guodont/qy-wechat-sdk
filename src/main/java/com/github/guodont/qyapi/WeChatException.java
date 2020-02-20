@@ -1,4 +1,4 @@
-package com.cc.wechat.qyapi;
+package com.github.guodont.qyapi;
 
 /**
  * Created by carlosxiao

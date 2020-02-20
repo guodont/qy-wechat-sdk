@@ -1,8 +1,8 @@
-package com.cc.wechat.qyapi.utils;
+package com.github.guodont.qyapi.utils;
 
-import com.cc.wechat.qyapi.api.Constants;
-import com.cc.wechat.qyapi.WeChatException;
-import com.cc.wechat.qyapi.WeChatMsg;
+import com.github.guodont.qyapi.api.Constants;
+import com.github.guodont.qyapi.WeChatException;
+import com.github.guodont.qyapi.WeChatMsg;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

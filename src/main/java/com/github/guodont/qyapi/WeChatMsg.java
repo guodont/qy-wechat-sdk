@@ -1,4 +1,4 @@
-package com.cc.wechat.qyapi;
+package com.github.guodont.qyapi;
 
 import java.util.HashMap;
 import java.util.Map;

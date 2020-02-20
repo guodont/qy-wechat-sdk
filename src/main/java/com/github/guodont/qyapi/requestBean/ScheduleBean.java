@@ -1,4 +1,4 @@
-package com.cc.wechat.qyapi.requestBean;
+package com.github.guodont.qyapi.requestBean;
 
 import java.util.List;
 

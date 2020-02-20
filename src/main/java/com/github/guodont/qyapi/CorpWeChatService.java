@@ -1,8 +1,8 @@
-package com.cc.wechat.qyapi;
+package com.github.guodont.qyapi;
 
-import com.cc.wechat.qyapi.api.Constants;
-import com.cc.wechat.qyapi.requestBean.ScheduleBean;
-import com.cc.wechat.qyapi.utils.HttpKit;
+import com.github.guodont.qyapi.api.Constants;
+import com.github.guodont.qyapi.requestBean.ScheduleBean;
+import com.github.guodont.qyapi.utils.HttpKit;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;

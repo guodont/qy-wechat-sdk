@@ -1,11 +1,10 @@
-package com.cc.wechat.qyapi;
+package com.github.guodont.qyapi;
 
-import com.cc.wechat.qyapi.requestBean.ScheduleBean;
+import com.github.guodont.qyapi.requestBean.ScheduleBean;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.UUID;
 
 import static org.junit.Assert.assertEquals;
